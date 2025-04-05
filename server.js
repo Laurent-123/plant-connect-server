@@ -7,7 +7,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const admin = require('firebase-admin');
 const cors = require('cors');
-const serviceAccount = require('./serviceAccountKey.json');
+const serviceAccount = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
 
 // ✅ Initialisation Firebase Admin avec serviceAccount
